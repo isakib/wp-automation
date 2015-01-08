@@ -19,6 +19,8 @@ cucumber
 
 Directory structure
 -------------------
+```
+
 .
 ├── features
 │   └──entities
@@ -36,14 +38,14 @@ Directory structure
 │   │   └── local_assert_steps.rb
 │   │   └── local_crud_response_steps.rb
 │   │   └── local_email_steps.rb
-│   │    └── local_file_steps.rb
-│   │    └── local_script_steps.rb
-│   │    └── local_steps.rb
-│   │    └── local_web_steps.rb
-`   │    └── local_xml_file_steps.rb   
-    └──lib
+│   │   └── local_file_steps.rb
+│   │   └── local_script_steps.rb
+│   │   └── local_steps.rb
+│   │   └── local_web_steps.rb
+│   │   └── local_xml_file_steps.rb   
+│   └──lib
         └── cucumber_helpder.rb
-.
+```
 
 Features
 --------
