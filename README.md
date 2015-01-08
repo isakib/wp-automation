@@ -19,31 +19,31 @@ cucumber
 
 Directory structure
 -------------------
-
-|__ features
-|   |__ entities
-|   |   |__ entity.feature
-|   |   |__ step_definitions
-|   |       |__ anything.rb
-|   |       |__ entity_steps.rb
-|   |__ locations
-|   |   |__ location.feature
-|   |   |__ step_definitions
-|   |       |__location_steps.rb
-|   |__ sites
-|   |   |__ step_definitions
-|   |__ step_definitions
-|   |   |__ local_assert_steps.rb
-|   |   |__ local_crud_response_steps.rb
-|   |   |__ local_email_steps.rb
-|   |   |__ local_file_steps.rb
-|   |   |__ local_script_steps.rb
-|   |   |__ local_steps.rb
-|   |   |__ local_web_steps.rb
-`   |   |__ local_xml_file_steps.rb   
-    |__ lib
-        |__ cucumber_helpder.rb
-
+.
+├── features
+│   └──entities
+│   │    └── entity.feature
+│   │    └── step_definitions
+│   │        └── anything.rb
+│   │        └── entity_steps.rb
+│   └── locations
+│   │   └── location.feature
+│   │    └── step_definitions
+│   │        └──location_steps.rb
+│   └── sites
+│   │   └── step_definitions
+│   └── step_definitions
+│   │   └── local_assert_steps.rb
+│   │   └── local_crud_response_steps.rb
+│   │   └── local_email_steps.rb
+│   │    └── local_file_steps.rb
+│   │    └── local_script_steps.rb
+│   │    └── local_steps.rb
+│   │    └── local_web_steps.rb
+`   │    └── local_xml_file_steps.rb   
+    └──lib
+        └── cucumber_helpder.rb
+.
 
 Features
 --------
@@ -51,7 +51,7 @@ Create features in features directory, with the extension of `feature`.
 
 Step definitions
 ----------------
-Create step definitions in the `step_definitions` directory.
+Create step definitions in the `step_definitions` directory witin the entity. 
 A sample step definition is given with the project.
 
 Configuration
