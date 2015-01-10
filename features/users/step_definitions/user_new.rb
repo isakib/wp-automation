@@ -27,21 +27,3 @@ require_relative '../../../lib/cucumber_helper'
 # Given /^I should see "([^"]*)" on screen$/ do |text|
 #   expect(page).to have_content text
 # end
-#
-# Then /^I should be on "(.*)" page$/ do |page|
-#   expect(current_path).to eq page
-# end
-#
-# When /^I wait for (\d+) seconds?$/ do |secs|
-#   sleep secs.to_i
-# end
-#
-#
-# # Given /^I fill in "(.*)" with "(.*)" email $/ do |selector, value|
-# # #   fill_in selector, :with => Time.now.getutc
-# # # end
-# #
-# # When /^I check the favorite color count(?: for email address (.*))?$/ do |email|
-# #   email ||= "value"
-# #   puts 'Time.now.getutc ' + email
-# # end
