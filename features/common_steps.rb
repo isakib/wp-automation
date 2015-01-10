@@ -27,3 +27,8 @@ end
 Given /^I should see "([^"]*)" on screen$/ do |text|
   expect(page).to have_content text
 end
+
+When /^I select (.*) box is checked$/ do |checkbox|
+  check(checkbox)
+end
+
