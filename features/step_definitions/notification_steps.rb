@@ -1,4 +1,4 @@
-require_relative '../../../lib/cucumber_helper'
+require_relative '../../lib/cucumber_helper'
 
 Then /^I can see "(.+)" notification(?: with "(.+)")?$/ do |notification_type, message|
   if message

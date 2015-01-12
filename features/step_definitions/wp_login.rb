@@ -1,4 +1,5 @@
-require_relative '../../../lib/cucumber_helper'
+require_relative '../../lib/cucumber_helper'
+
 #
 # Given /^I am on the "(.*)" page$/ do |page|
 #   visit page

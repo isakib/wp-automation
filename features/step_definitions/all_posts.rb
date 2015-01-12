@@ -1,5 +1,4 @@
-require_relative '../../../lib/cucumber_helper'
-require_relative '../../../features/common_steps'
+require_relative '../../lib/cucumber_helper'
 
 #
 # Given /^I should see "([^"]*)" on screen$/ do |text|

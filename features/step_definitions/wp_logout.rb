@@ -1,4 +1,6 @@
-# require_relative '../../lib/cucumber_helper'
+require_relative '../../lib/cucumber_helper'
+
+
 #
 # #single approach to login
 # Given /^I am logged in with email "(.*)" and password "(.*)"$/ do |email, password|
