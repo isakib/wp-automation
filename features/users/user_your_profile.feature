@@ -7,3 +7,4 @@ Feature: Registration
     And I fill in "pass" with "123456"
     And I click on "Log In" button
 
+

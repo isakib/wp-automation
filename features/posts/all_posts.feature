@@ -6,4 +6,7 @@ Feature: Registration
     And I fill in "email" with "youremail@gmail.com"
     And I fill in "pass" with "123456"
     And I click on "Log In" button
+    And I fill in "<string>" with "<string>"
+    And I fill in "<string>" with "<string>"
+
 
