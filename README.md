@@ -21,7 +21,6 @@ Directory structure
 -------------------
 ```
 
-<code>
 |__ features
 |   |__ entities
 |   |   |__ entity.feature
@@ -47,7 +46,7 @@ Directory structure
         |__ env.rb
         |__ local_env.rb
         |__ local_transforms.rb
-</code>
+
 
 
 Features

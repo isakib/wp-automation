@@ -16,26 +16,14 @@ Given /^I click on "(.*)" button$/ do |selector|
   click_button selector
 end
 
-# Then /^the "([^"]*)" checkbox should be checked$/ do |id|
-#   find_field(id)[:value].should eq "forever"
-# end
-
 Given /^I should see "([^"]*)" on screen$/ do |text|
   expect(page).to have_content text
-end
-
-When /^I select (.*) box is checked$/ do |checkbox|
-  check(checkbox)
-end
-
-Then /^I select "(.*)" from "(.*)" drop-down list/ do |selector, value|
-  select selector, :from => value
 end
 
 Then /^I click the checkbox$/ do
   check(find("input[type='checkbox']")[:id])
 end
 
-When /^I select "(.*)" from element$/ do |role|
+When /^I select "(.*)" from drop-down menu$/ do |role|
   select(role, :from => "user_role")
 end
