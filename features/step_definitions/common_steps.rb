@@ -20,10 +20,20 @@ Given /^I should see "([^"]*)" on screen$/ do |text|
   expect(page).to have_content text
 end
 
-Then /^I click the checkbox$/ do
+When /^I wait for (\d+) seconds?$/ do |secs|
+  sleep secs.to_i
+end
+
+Then /^I click on checkbox$/ do
   check(find("input[type='checkbox']")[:id])
 end
 
 When /^I select "(.*)" from drop-down menu$/ do |role|
   select(role, :from => "user_role")
 end
+
+When /^I press xpath link "([^"]*)"$/ do |xpath|
+  page.find(:xpath, xpath).click
+end
+
+

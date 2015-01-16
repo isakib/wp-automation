@@ -1,10 +1,9 @@
 Feature: Add new user to system with several approaches
 
-
   Scenario: With valid email and password
     Given I am on the "/wp-login.php?" page
-    And I fill in "user_login" with "admin"
-    And I fill in "user_pass" with "1"
+    And I fill in "Email" with "admin"
+    And I fill in "Password" with "1"
     And I click on "Log In" button
     # blocks here or place background for repeative task
     And I should see "Welcome to WordPress!" on screen
@@ -16,7 +15,7 @@ Feature: Add new user to system with several approaches
     And I fill in "url" with "http://www.isakib.com"
     And I fill in "pass1" with "123456"
     And I fill in "pass2" with "123456"
-    And I click the checkbox
+    And I click on checkbox
     And I select "Contributor" from drop-down menu
     And I click on "Add New User" button
 

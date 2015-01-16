@@ -1,5 +1,9 @@
 Feature: Retrive password from system
     As user, I forgot my password and I would like to retrive password from wordpress.
+  
+  Scenario: Land to lostpassword page - verification
+    Given I am on the "/wp-login.php?action=lostpassword" page
+    And I should see "Please enter your username or email address. You will receive a link to create a new password via email." on screen
 
   Scenario: Valid input to retrive password
   Given I am on the "/wp-login.php?action=lostpassword" page
