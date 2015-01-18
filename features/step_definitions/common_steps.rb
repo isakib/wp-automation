@@ -35,3 +35,7 @@ end
 When /^I click through xpath link "([^"]*)"$/ do |xpath|
   page.find(:xpath, xpath).click
 end
+
+When "I upload a file" do
+  attach_file('file','features/upload_files/theme-unit-test-data.xml')
+end
