@@ -24,16 +24,14 @@ When /^I wait for (\d+) seconds?$/ do |secs|
   sleep secs.to_i
 end
 
-Then /^I click on checkbox$/ do
+Then /^I select single checkbox$/ do
   check(find("input[type='checkbox']")[:id])
 end
 
-When /^I select "(.*)" from drop-down menu$/ do |role|
-  select(role, :from => "user_role")
+When /^I select "(.*)" from "(.*)" drop-down menu$/ do |selector, id|
+  select(selector, :from => id)
 end
 
-When /^I press xpath link "([^"]*)"$/ do |xpath|
+When /^I click through xpath link "([^"]*)"$/ do |xpath|
   page.find(:xpath, xpath).click
 end
-
-

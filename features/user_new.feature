@@ -1,5 +1,7 @@
 Feature: Add new user to system with several approaches
 
+Note: Execute delete of all users, before to execute this scenario.
+
   Scenario: With valid email and password
     Given I am on the "/wp-login.php?" page
     And I fill in "Email" with "admin"
@@ -8,15 +10,16 @@ Feature: Add new user to system with several approaches
     # blocks here or place background for repeative task
     And I should see "Welcome to WordPress!" on screen
     Then I am on the "/wp-admin/user-new.php" page
-    And I fill in "user_login" with "sample11newuser"
+    And I fill in "user_login" with "wwww"
     And I fill in "email" with "sample111@1gmail.com"
     And I fill in "first_name" with "Sakib"
     And I fill in "last_name" with "Mahmud"
     And I fill in "url" with "http://www.isakib.com"
     And I fill in "pass1" with "123456"
     And I fill in "pass2" with "123456"
-    And I click on checkbox
-    And I select "Contributor" from drop-down menu
+    And I click through xpath link ".//*[@id='send_password']"
+#    And I select "Contributor" from "display_name" drop-down menu
+    And I select "Contributor" from "user_role" drop-down menu
     And I click on "Add New User" button
 
 ## Note for test simplification:
