@@ -322,7 +322,7 @@ do_action( 'personal_options', $profileuser );
 
 <?php if ( !IS_PROFILE_PAGE && !is_network_admin() ) : ?>
 <tr class="user-role-wrap"><th><label for="role"><?php _e('Role') ?></label></th>
-<td><select name="role" id="role">
+<td><select name="role" id="user_role">
 <?php
 // Compare user role against currently editable roles
 $user_roles = array_intersect( array_values( $profileuser->roles ), array_keys( get_editable_roles() ) );
@@ -369,7 +369,7 @@ if ( is_multisite() && is_network_admin() && ! IS_PROFILE_PAGE && current_user_c
 <tr class="user-display-name-wrap">
 	<th><label for="display_name"><?php _e('Display name publicly as') ?></label></th>
 	<td>
-		<select name="display_name" id="display_name">
+		<select name="display_name_list" id="display_name">
 		<?php
 			$public_display = array();
 			$public_display['display_nickname']  = $profileuser->nickname;
