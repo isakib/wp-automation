@@ -42,6 +42,6 @@ end
 #
 # ## Testing Generic attempt
 
-When /^I upload a "(.+)" file located at "(.+)"$/ do |file_name, path|
-  attach_file('file', "#{path}/#{file_name}")
+When /^I upload a "(.+)" file with "(.+)" and located at "(.+)"$/ do |file_name, name_selector, path|
+  attach_file(name_selector, "#{path}/#{file_name}")
 end

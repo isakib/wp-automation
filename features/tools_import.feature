@@ -9,9 +9,7 @@ Feature: Upload Valid and Invalid .xml file for testing
     And I am on the "/wp-admin/import.php" page
     And I click through xpath link ".//*[@id='wpbody-content']/div[3]/table/tbody/tr[8]/td[1]/a"
     And I should see "Import WordPress" on screen
-#    And I upload a file
-#    And I upload a "xml" file located at "theme-unit-test-data.xml"
-    And I upload a "theme-unit-test-data.xml" file located at "/Users/sakib/Documents/projects/wp-automation/features/upload_files"
+    And I upload a "theme-unit-test-data.xml" file with "file" and located at "/Users/sakib/Documents/projects/wp-automation/features/upload_files"
     And I click on "Upload file and import" button
     And I wait for 3 seconds
     And I should see "Import WordPress" on screen

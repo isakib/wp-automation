@@ -8,9 +8,8 @@ Feature: Upload media to system
     And I click on "Log In" button
     # blocks here or place background for repeating task
     And I am on the "/wp-admin/media-new.php" page
-#    And I click on "browser uploader" link
-    And I upload a "sunshine.jpg" file located at "/Users/sakib/Documents/projects/wp-automation/features/upload_files"
+    And I upload a "sunshine.jpg" file with "async-upload" and located at "/Users/sakib/Documents/projects/wp-automation/features/upload_files"
     And I click on "Upload" button
-    And I wait for 10 seconds
+    And I wait for 5 seconds
     
 
