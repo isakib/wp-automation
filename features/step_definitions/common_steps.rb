@@ -36,12 +36,12 @@ When /^I click through xpath link "([^"]*)"$/ do |xpath|
   page.find(:xpath, xpath).click
 end
 
-When "I upload a file" do
-  attach_file('file','features/upload_files/theme-unit-test-data.xml')
-end
+# When "I upload a file" do
+#   attach_file('file','features/upload_files/theme-unit-test-data.xml')
+# end
+#
+# ## Testing Generic attempt
 
-## Testing Generic attempt
-
-When /^I upload a "(.+)" file located at "(.+)"$/ do |format, path|
-  attach_file(:xml, File.join('features', path), "xml/#{format}")
+When /^I upload a "(.+)" file located at "(.+)"$/ do |file_name, path|
+  attach_file('file', "#{path}/#{file_name}")
 end
