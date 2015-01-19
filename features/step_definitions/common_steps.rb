@@ -39,3 +39,9 @@ end
 When "I upload a file" do
   attach_file('file','features/upload_files/theme-unit-test-data.xml')
 end
+
+## Testing Generic attempt
+
+When /^I upload a "(.+)" file located at "(.+)"$/ do |format, path|
+  attach_file(:xml, File.join('features', path), "xml/#{format}")
+end

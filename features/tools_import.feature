@@ -6,8 +6,14 @@ Feature: Upload Valid and Invalid .xml file for testing
     And I fill in "user_pass" with "1"
     And I click on "Log In" button
     # blocks here or place background for repeating task
-    And I am on the "/wp-admin/admin.php?import=wordpress" page
-    And I upload a file
+    And I am on the "/wp-admin/import.php" page
+    And I click through xpath link ".//*[@id='wpbody-content']/div[3]/table/tbody/tr[8]/td[1]/a"
+    And I should see "Import WordPress" on screen
+#    And I upload a file
+    And I upload a "xml" file located at "theme-unit-test-data.xml"
+    And I click on "Upload file and import" button
     And I wait for 3 seconds
     And I should see "Import WordPress" on screen
-    And I select "Sakib Mahmud" from "user_map" drop-down menu
+    And I select "Sakib Mahmud" from "user_assign_0" drop-down menu
+    And I wait for 5 seconds
+    And I select "Sakib Mahmud" from "user_assign_1" drop-down menu
