@@ -1,12 +1,10 @@
 Feature: Upload Valid and Invalid .xml file for testing
 
+  Background:
+    Given I am logged in with username "Email" and email "Password"
+
   Scenario: With valid email and password
-    Given I am on the "/wp-login.php?" page
-    And I fill in "user_login" with "admin"
-    And I fill in "user_pass" with "1"
-    And I click on "Log In" button
-    # blocks here or place background for repeating task
-    And I am on the "/wp-admin/import.php" page
+    Given I am on the "/wp-admin/import.php" page
     And I click through xpath link ".//*[@id='wpbody-content']/div[3]/table/tbody/tr[8]/td[1]/a"
     And I should see "Import WordPress" on screen
     And I upload a "theme-unit-test-data.xml" file with "file" and located at "/Users/sakib/Documents/projects/wp-automation/features/upload_files"

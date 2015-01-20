@@ -1,13 +1,10 @@
 Feature: Registration
   As a registered user, I would like to register to system
 
-  Scenario: With valid email and password
-    Given I am on the "/wp-login.php?" page
-    And I fill in "user_login" with "admin"
-    And I fill in "user_pass" with "1"
-    And I click on "Log In" button
-    # blocks here or place background for repeative task
+  Background:
+    Given I am logged in with username "Email" and email "Password"
 
+  Scenario: With valid email and password
     # Checkboxing all of them. 
     And I click on "Screen Options" link
 

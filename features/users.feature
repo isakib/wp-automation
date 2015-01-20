@@ -1,11 +1,10 @@
 Feature: All Users Listing page
   Verification of user listed properly, user removed properly,
 
+  Background:
+    Given I am logged in with username "Email" and email "Password"
+
   Scenario: With valid email and password
-    Given I am on the "/wp-login.php?" page
-    And I fill in "user_login" with "admin"
-    And I fill in "user_pass" with "1"
-    And I click on "Log In" button
     # blocks here or place background for repeating task
     And I am on the "/wp-admin/users.php" page
     And I click through xpath link ".//*[@id='cb-select-all-1']"

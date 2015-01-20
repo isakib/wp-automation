@@ -1,9 +1,14 @@
 Feature: Registration
   As a registered user, I would like to register to system
 
+  Background:
+    Given I am logged in with username "Email" and email "Password"
+
   Scenario: With valid email and password
-    Given I am on the "https://www.facebook.com/" page
-    And I fill in "email" with "youremail@gmail.com"
-    And I fill in "pass" with "123456"
-    And I click on "Log In" button
+    And I am on the "/wp-admin/tools.php" page
+    And I should see "Tools" on screen
+    And I should see "Categories and Tags Converter" on screen
+    And I should see "Press This" on screen
+    And I click on "Categories and Tags Converter" link
+    And I should see "Import" on screen
 

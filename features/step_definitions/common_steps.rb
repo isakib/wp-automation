@@ -24,6 +24,7 @@ When /^I wait for (\d+) seconds?$/ do |secs|
   sleep secs.to_i
 end
 
+# requires to make checkbox generic #
 Then /^I select single checkbox$/ do
   check(find("input[type='checkbox']")[:id])
 end
