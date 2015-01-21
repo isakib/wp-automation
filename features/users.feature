@@ -11,8 +11,9 @@ Feature: All Users Listing page
     And I click through xpath link ".//*[@id='user_1']"
     And I select "Delete" from "bulk-action-selector-top" drop-down menu
     And I click on "doaction" button
-    And I wait for 5 seconds
+    And I wait for 3 seconds
     And I should see "Delete Users" on screen
     And I click through xpath link ".//*[@id='delete_option1']"
     And I click on "Confirm Deletion" button
     And I should see "User deleted." on screen
+

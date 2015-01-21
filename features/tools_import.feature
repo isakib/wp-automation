@@ -11,6 +11,12 @@ Feature: Upload Valid and Invalid .xml file for testing
     And I click on "Upload file and import" button
     And I wait for 3 seconds
     And I should see "Import WordPress" on screen
-    And I select "Sakib Mahmud" from "user_assign_0" drop-down menu
+    ## Missing steps
+#    And I select "Sakib Mahmud" from "user_assign_0" drop-down menu
+#    And I wait for 5 seconds
+#    And I select "Sakib Mahmud" from "user_assign_1" drop-down menu
+    And I click on "Submit" button
+    # Missing steps
+#    And I select single checkbox
     And I wait for 5 seconds
-    And I select "Sakib Mahmud" from "user_assign_1" drop-down menu
+    And I should see "All done. Have fun!" on screen
