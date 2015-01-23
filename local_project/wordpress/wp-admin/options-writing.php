@@ -75,7 +75,7 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 <th scope="row"><label for="default_category"><?php _e('Default Post Category') ?></label></th>
 <td>
 <?php
-wp_dropdown_categories(array('hide_empty' => 0, 'name' => 'default_category', 'orderby' => 'name', 'selected' => get_option('default_category'), 'hierarchical' => true));
+wp_dropdown_categories(array('hide_empty' => 0, 'name' => 'default_category_list', 'orderby' => 'name', 'selected' => get_option('default_category'), 'hierarchical' => true));
 ?>
 </td>
 </tr>
@@ -86,7 +86,7 @@ unset( $post_formats['standard'] );
 <tr>
 <th scope="row"><label for="default_post_format"><?php _e('Default Post Format') ?></label></th>
 <td>
-	<select name="default_post_format" id="default_post_format">
+	<select name="default_post_format_list" id="default_post_format">
 		<option value="0"><?php echo get_post_format_string( 'standard' ); ?></option>
 <?php foreach ( $post_formats as $format_slug => $format_name ): ?>
 		<option<?php selected( get_option( 'default_post_format' ), $format_slug ); ?> value="<?php echo esc_attr( $format_slug ); ?>"><?php echo esc_html( $format_name ); ?></option>
@@ -133,9 +133,9 @@ if ( apply_filters( 'enable_post_by_email_configuration', true ) ) {
 <table class="form-table">
 <tr>
 <th scope="row"><label for="mailserver_url"><?php _e('Mail Server') ?></label></th>
-<td><input name="mailserver_url" type="text" id="mailserver_url" value="<?php form_option('mailserver_url'); ?>" class="regular-text code" />
+<td><input name="mailserver_url_list" type="text" id="mailserver_url" value="<?php form_option('mailserver_url'); ?>" class="regular-text code" />
 <label for="mailserver_port"><?php _e('Port') ?></label>
-<input name="mailserver_port" type="text" id="mailserver_port" value="<?php form_option('mailserver_port'); ?>" class="small-text" />
+<input name="mailserver_port_numeric" type="text" id="mailserver_port" value="<?php form_option('mailserver_port'); ?>" class="small-text" />
 </td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@ if ( apply_filters( 'enable_post_by_email_configuration', true ) ) {
 <th scope="row"><label for="default_email_category"><?php _e('Default Mail Category') ?></label></th>
 <td>
 <?php
-wp_dropdown_categories(array('hide_empty' => 0, 'name' => 'default_email_category', 'orderby' => 'name', 'selected' => get_option('default_email_category'), 'hierarchical' => true));
+wp_dropdown_categories(array('hide_empty' => 0, 'name' => 'default_email_category_list', 'orderby' => 'name', 'selected' => get_option('default_email_category'), 'hierarchical' => true));
 ?>
 </td>
 </tr>
@@ -176,7 +176,7 @@ if ( apply_filters( 'enable_update_services_configuration', true ) ) {
 
 <p><label for="ping_sites"><?php _e('When you publish a new post, WordPress automatically notifies the following site update services. For more about this, see <a href="http://codex.wordpress.org/Update_Services">Update Services</a> on the Codex. Separate multiple service <abbr title="Universal Resource Locator">URL</abbr>s with line breaks.') ?></label></p>
 
-<textarea name="ping_sites" id="ping_sites" class="large-text code" rows="3"><?php echo esc_textarea( get_option('ping_sites') ); ?></textarea>
+<textarea name="ping_sites_list" id="ping_sites" class="large-text code" rows="3"><?php echo esc_textarea( get_option('ping_sites') ); ?></textarea>
 
 <?php else : ?>
 

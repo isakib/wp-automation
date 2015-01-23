@@ -151,7 +151,7 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 <tr>
 <th scope="row"><label for="default_role"><?php _e('New User Default Role') ?></label></th>
 <td>
-<select name="default_role" id="default_role"><?php wp_dropdown_roles( get_option('default_role') ); ?></select>
+<select name="default_role_list" id="default_role"><?php wp_dropdown_roles( get_option('default_role') ); ?></select>
 </td>
 </tr>
 <?php } else { ?>
@@ -194,7 +194,7 @@ if ( empty($tzstring) ) { // Create a UTC+- zone if no timezone string exists
 <th scope="row"><label for="timezone_string"><?php _e('Timezone') ?></label></th>
 <td>
 
-<select id="timezone_string" name="timezone_string">
+<select id="timezone_string" name="timezone_string_list">
 <?php echo wp_timezone_choice($tzstring); ?>
 </select>
 
