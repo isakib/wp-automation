@@ -2,7 +2,7 @@ Feature: Retrive password from system
     As user, I forgot my password and I would like to retrive password from wordpress.
 
   Background:
-    Given I am logged in with username "Email" and email "Password"
+    Given I am logged in with username "Email" and password "Password"
   
   Scenario: Land to lostpassword page - verification
     Given I am on the "/wp-login.php?action=lostpassword" page

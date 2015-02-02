@@ -37,12 +37,11 @@ When /^I click through xpath link "([^"]*)"$/ do |xpath|
   page.find(:xpath, xpath).click
 end
 
-# When "I upload a file" do
-#   attach_file('file','features/upload_files/theme-unit-test-data.xml')
-# end
-#
-# ## Testing Generic attempt
-
 When /^I upload a "(.+)" file with "(.+)" and located at "(.+)"$/ do |file_name, name_selector, path|
   attach_file(name_selector, "#{path}/#{file_name}")
+end
+
+When /^I hover and click on $/ do
+  # driver.execute_script('$("#element").trigger("hover")')
+  find('.row-actions').hover
 end

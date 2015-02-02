@@ -2,7 +2,7 @@ Feature: Registration
   As a registered user, I would like to register to system
 
   Background:
-    Given I am logged in with username "Email" and email "Password"
+    Given I am logged in with username "Email" and password "Password"
 
   Scenario: I want to see static pages
     Given I am on the "/wp-admin/options-reading.php" page

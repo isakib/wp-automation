@@ -1,7 +1,7 @@
 Feature: WordPress system user's profile edit, update and save.
 
   Background:
-    Given I am logged in with username "Email" and email "Password"
+    Given I am logged in with username "Email" and password "Password"
 
   Scenario: With valid email and password
     Given I am on the "/wp-admin/profile.php" page

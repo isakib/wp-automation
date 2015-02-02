@@ -1,7 +1,7 @@
 Feature: Add new user to system with several approaches
 
   Background:
-    Given I am logged in with username "Email" and email "Password"
+    Given I am logged in with username "Email" and password "Password"
 
   Scenario: With valid email and password
     Given I should see "Welcome to WordPress!" on screen
