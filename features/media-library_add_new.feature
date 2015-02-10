@@ -1,7 +1,7 @@
 Feature: Upload media to system
 
   Background:
-    Given I am logged in with username "Email" and email "Password"
+    Given I am logged in with username "Email" and password "Password"
 
   Scenario: With valid email and password
     And I am on the "/wp-admin/media-new.php" page
