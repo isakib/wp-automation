@@ -8,6 +8,10 @@ Given /^I fill in "(.*)" with "(.*)"$/ do |selector, value|
   fill_in selector, :with => value
 end
 
+# Given /^I fill in unique "(.*)" with "(.*) "$/ do |selector, value|
+# fill_in('user_email', :with=>Faker::Internet.email)
+#   end
+
 Given /^I click on "(.*)" link$/ do |selector|
   click_on selector
 end
@@ -40,8 +44,11 @@ end
 When /^I upload a "(.+)" file with "(.+)" and located at "(.+)"$/ do |file_name, name_selector, path|
   attach_file(name_selector, "#{path}/#{file_name}")
 end
+#
+# When /^I hover and click on $/ do
+#   find('.row-actions').hover.find('.reply hide-if-no-js').click.Reply
+# end
 
-When /^I hover and click on $/ do
-  # driver.execute_script('$("#element").trigger("hover")')
-  find('.row-actions').hover
+When /^I click on hidden link$/ do
+  find(".remove_fields", visible: false).click
 end
