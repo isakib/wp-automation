@@ -14,7 +14,6 @@ Feature: Registration
     #missing steps
     And I click on "Save Changes" button
 
-
   Scenario: I would like to setup writing pages
     Given I am on the "/wp-admin/options-reading.php" page
     Then I click through xpath link ".//*[@id='front-static-pages']/fieldset/p[1]/label/input"
