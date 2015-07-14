@@ -2,7 +2,7 @@ Feature: All Users Listing page
   Verification of user listed properly, user removed properly,
 
   Background:
-    Given I am logged in with username "Email" and email "Password"
+    Given I am logged in with username "Email" and password "Password"
 
   Scenario: With valid email and password
     # blocks here or place background for repeating task

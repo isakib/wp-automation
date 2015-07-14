@@ -7,7 +7,7 @@ Feature: Add new user to system with several approaches
     Given I should see "Welcome to WordPress!" on screen
     Then I am on the "/wp-admin/user-new.php" page
     And I fill in "user_login" with "wwww"
-    And I fill in "email" with "sample111ee@1gmail.com"
+    And I fill in "email" with "sample111eddde@1gmail.com"
     And I fill in "first_name" with "Sakib"
     And I fill in "last_name" with "Mahmud"
     And I fill in "url" with "http://www.isakib.com"

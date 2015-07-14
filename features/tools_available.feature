@@ -2,7 +2,7 @@ Feature: Registration
   As a registered user, I would like to register to system
 
   Background:
-    Given I am logged in with username "Email" and email "Password"
+    Given I am logged in with username "Email" and password "Password"
 
   Scenario: With valid email and password
     And I am on the "/wp-admin/tools.php" page
