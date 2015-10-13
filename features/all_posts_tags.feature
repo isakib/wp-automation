@@ -11,6 +11,7 @@ Feature: Registration
     And I fill in "tag-description" with "no way no way"
     And I click on "submit" button
     And I wait for 15 seconds
+    And I should see "A term with the name already exists in this taxonomy." on screen
 
 
   Scenario: Search to find tags and delet the tags
